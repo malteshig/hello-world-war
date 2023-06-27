@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout1') {
             steps {
-                sh 'git clone https://github.com/KiranVItagi/hello-world-war'
+                sh 'https://github.com/malteshig/hello-world-war.git'
             }
         }
         stage('build') {
@@ -14,7 +14,7 @@ pipeline {
        stage('Push artifacts into artifactory') { 
            steps { 
                rtUpload ( 
-                   serverId: 'kiranartifactory', 
+                   serverId: 'migartifactory', 
                    spec:     '''{ 
                        "files": [ 
                            { 
