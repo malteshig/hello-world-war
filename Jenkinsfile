@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout1') {
             steps {
-                sh 'https://github.com/malteshig/hello-world-war.git'
+                sh 'git clone https://github.com/malteshig/hello-world-war.git'
             }
         }
         stage('build') {
